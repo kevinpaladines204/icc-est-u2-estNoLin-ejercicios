@@ -1,3 +1,54 @@
+# Ejercicios de Estructuras No lineales
+
+## 📌 Información General
+
+- **Título:** Estructuras No lineales
+- **Asignatura:** Estructura de Datos
+- **Carrera:** Computación
+- **Estudiante:** Kevin Paladines
+- **Fecha:** 06/07/2025
+- **Profesor:** Ing. Pablo Torres
+
+---
+
+## 🧩 Estructura del proyecto
+    src/
+    │
+    ├── Main
+    │   └── Ejercicio_01_insert
+    │       └── InsertBST
+    │   └── Ejercicio_02_invert
+    │       └── InvertBinaryTree
+    │   └── Ejercicio_03_listLevels
+    │       └── listLevels
+    │   └── Ejercicio_04_depth
+    │       └── Depth
+    │
+    │   └── Materia
+    │       └── Controllers
+    │           └── ArbolBinario
+    │           └── ArbolRecoridos
+    │           └── AVLTree
+    │       └── Models
+    │           └── 
+    │
+    │   └── App
+    │
+    ├── Test
+    │   └── Ejercicio_01_insert
+    │       └── InsertBSTTest
+    │   └── Ejercicio_02_invert
+    │       └── InvertBinaryTreeTest
+    │   └── Ejercicio_03_listLevels
+    │       └── listLevelsTest
+    │   └── Ejercicio_04_depth
+    │       └── DepthTest
+
+
+    ---
+
+---
+
 # Estructuras No Lineales – Ejercicios Árboles
 
 Este proyecto contiene la solución a cuatro ejercicios prácticos sobre estructuras de datos tipo árbol binario, como parte del aprendizaje de estructuras no lineales en Java. Cada ejercicio se encuentra organizado en su propia carpeta, siguiendo la convención de paquetes y buenas prácticas.
@@ -19,146 +70,63 @@ Este proyecto utiliza una verificación automática que valida que has ingresado
 - No podrás enviar tu código (`push`) al repositorio si tienes activado el sistema de validación local.
 - Las pruebas automáticas en GitHub Actions también fallarán si no detectan tu nombre y correo.
 
-### ¿Qué debo hacer?
-
-1. Abre el archivo `student.env` que ya está creado en el proyecto.
-2. Rellena tus datos:
-
-```
-STUDENT_NAME=Tu Nombre Completo
-STUDENT_EMAIL=tu.correo@institucion.edu.ec
-```
-
-
-3. **No borres estas líneas ni cambies los nombres de las variables.**
-4. Guarda los cambios y vuelve a ejecutar el programa o hacer push.
-
-> 💡 Este mecanismo asegura la autoría del código y que cada estudiante reciba su evaluación automática de forma personalizada.
-
----
-
-
-
-
-## Explicación para el estudiante
-
-```
-src/
-│
-├── Materia/
-│
-├── Ejercicio_01_insert/
-├── Ejercicio_02_invert/
-├── Ejercicio_03_listLeves/
-└── Ejercicio_04_depth/
-```
-
----
-
 ## Descripción de Ejercicios
 
 ### Ejercicio 01: Insertar en un Árbol Binario de Búsqueda (BST)
 
-Carpeta: `Ejercicio_01_insert`
-Implementa un algoritmo para insertar nodos en un Árbol Binario de Búsqueda.
+📂 Carpeta: `Ejercicio_01_insert`
+En este ejercicio se implementa una clase llamada InsertBST que contiene el método insert, el cual permite construir un Árbol Binario a partir de una lista de valores enteros. El objetivo es insertar cada número en la posición correspondiente del árbol.
 
- **Input de ejemplo:** `[5, 3, 7, 2, 4, 6, 8]`
- **Output esperado:**
+ **Input propuesto:** `[12, 10, 14, 9, 11, 13, 15]`
 
-```
-    5
-  3   7
- 2 4 6 8
-```
+ **Arbol esperado:**
 
+![alt text](image.png)
 ---
 
 ### Ejercicio 02: Invertir un Árbol Binario
 
 📂 Carpeta: `Ejercicio_02_invert`
-Dada la raíz de un árbol binario, el algoritmo devuelve su versión invertida (espejo).
+Este ejercicio implementa un método que invierte un Árbol Binario, es decir, intercambia los subárboles izquierdo y derecho de todos los nodos del árbol. En este ejercicio se utiliza recursión.
 
- **Input de ejemplo:**
+ **Arbol original:**
 
-```
-    4
-  2   7
-1  3 6  9
-```
+![alt text](image-1.png)
 
-**Output esperado:**
+**Arbol invertido:**
 
-```
-    4
-  7   2
-9  6 3  1
-```
+![alt text](image-2.png)
 
 ---
 
 ### Ejercicio 03: Listar Niveles en Listas Enlazadas
 
 📂 Carpeta: `Ejercicio_03_listLeves`
-Devuelve una lista enlazada con los nodos por nivel. Si hay N niveles, se obtienen N listas.
+Este ejercicio implementa un método que recorre un árbol binario nivel por nivel y agrupa los nodos de cada nivel en una lista independiente. El resultado final es una lista general que contiene una sublista por cada nivel del árbol.
 
- **Input de ejemplo:**
+ **Arbol original:**
 
-```
-    4
-  2   7
-1  3 6  9
-```
+![alt text](image-3.png)
 
-**Output esperado:**
+**Niveles listados:**
 
-```
-4  
-2 → 7  
-1 → 3 → 6 → 9
-```
+![alt text](image-4.png)
 
 ---
 
 ### Ejercicio 04: Calcular la Profundidad Máxima
 
-Carpeta: `Ejercicio_04_depth`
-Calcula la profundidad máxima de un árbol binario (la longitud del camino más largo desde la raíz hasta una hoja).
+📂 Carpeta: `Ejercicio_04_depth`
+En este ejercicio se implementa un algoritmo para calcular la profundidad máxima de un árbol binario, es decir, la longitud del camino más largo desde la raíz hasta una hoja.
 
-**Input de ejemplo:**
+ **Arbol original:**
 
-```
-    4
-  2   7
-1  3  
-8
-```
+![alt text](image-5.png)
 
-**Output esperado:** `4`
 
----
+**Output esperado:**
 
-## Indicaciones Generales
-
-* Lee cuidadosamente el enunciado de cada ejercicio.
-* Cada carpeta debe contener:
-
-  * Código fuente Java.
-  * Casos de prueba.
-  * Comentarios claros.
-* Realiza commit y push con el mensaje:
-
-  ```
-  Estructuras No Lineales – Ejercicios Árboles
-  ```
-* En el AVAC, sube la **URL del repositorio** con el código.
-
----
-
-## No se calificará si:
-
-* No hay commit con los ejercicios.
-* No se incluye este README explicativo.
-* Las clases o métodos no siguen los nombres requeridos.
+![alt text](image-6.png)
 
 ---
 
@@ -174,14 +142,3 @@ Calcula la profundidad máxima de un árbol binario (la longitud del camino más
 |                    | Implementado parcialmente: <br>• Ejercicio 1 y 4 → 2 pts<br>• Ejercicio 2 y 3 → 4 pts | 2–4 pts     |
 |                    | Código funcional pero **no pasa todas las pruebas**                                   | 6 pts       |
 |                    | Código funcional y **pasa todas las pruebas correctamente**                           | 7 pts       |
-
-
-
-## Contribuir
-
-Para contribuir a este proyecto, por favor crea un fork y envía una solicitud de extracción, o simplemente abre un issue con tus comentarios y sugerencias.
-
-## Autores
-
-- [PABLO TORRES] - Desarrollo inicial
-
